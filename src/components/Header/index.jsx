@@ -1,7 +1,6 @@
 import logo from "../../assets/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { IconContext } from "react-icons";
 import { ImSearch } from "react-icons/im";
 
 export default function Header() {
