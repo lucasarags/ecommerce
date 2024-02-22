@@ -1,7 +1,7 @@
 import express from "express";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import pool from "../db/db.mjs";
+import pool from "./db/db.mjs";
 
 const app = express();
 
