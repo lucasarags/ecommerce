@@ -6,6 +6,12 @@ CREATE TABLE IF NOT EXISTS usuario (
     senha VARCHAR(255) NOT NULL
 );
 
+-- Criação da tabela "categoria"
+CREATE TABLE IF NOT EXISTS categoria (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL
+);
+
 -- Criação da tabela "produto"
 CREATE TABLE IF NOT EXISTS produto (
     id SERIAL PRIMARY KEY,
@@ -34,9 +40,23 @@ CREATE TABLE IF NOT EXISTS item_do_pedido (
     preco_unitario NUMERIC(10, 2) NOT NULL
 );
 
--- Inserir dados de produtos
-INSERT INTO produto (nome, descricao, preco, qtd_estq, image)
-VALUES
-  ('Produto 1', 'Descrição do Produto 1', 10.99, 100, '/product_images/produto1.jpg'),
-  ('Produto 2', 'Descrição do Produto 2', 20.99, 50, '/product_images/produto1.jpg'),
-  ('Produto 3', 'Descrição do Produto 3', 15.99, 75, '/product_images/produto1.jpg');
+-- Inserção de algumas categorias de exemplo
+INSERT INTO categoria (nome) VALUES
+('Eletronicos'),
+('Roupas'),
+('Alimentos'),
+('Livros');
+
+-- Exemplo de inserção de produtos com categorias
+INSERT INTO produto (nome, descricao, preco, qtd_estq, categoria_id) VALUES
+('Smartphone', 'Um smartphone de última geração', 1500.00, 100, 1),
+('Camiseta', 'Camiseta de algodão preta', 25.00, 50, 2),
+('Arroz', 'Pacote de arroz integral', 10.00, 200, 3),
+('JavaScript: The Good Parts', 'Livro sobre JavaScript', 35.00, 20, 4);
+
+-- -- Inserir dados de produtos
+-- INSERT INTO produto (nome, descricao, preco, qtd_estq, image)
+-- VALUES
+--   ('Produto 1', 'Descrição do Produto 1', 10.99, 100, '/product_images/produto1.jpg'),
+--   ('Produto 2', 'Descrição do Produto 2', 20.99, 50, '/product_images/produto1.jpg'),
+--   ('Produto 3', 'Descrição do Produto 3', 15.99, 75, '/product_images/produto1.jpg');
