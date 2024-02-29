@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
-  const [showMob, setShowMob] = useState(false);
-
+export default function Navbar({ showMob, setShowMob }) {
   return (
     <nav>
       <ul
-        className={`w-screen gap-10 justify-center hidden md:flex max-w-[1440px] py-3`}
+        className={`w-screen gap-10 justify-center hidden md:flex py-12 text-base font-semibold text-zinc-50`}
       >
         <li>
           <Link to="/">Home</Link>
@@ -22,26 +20,6 @@ export default function Navbar() {
           <Link to="/meus-pedidos">Meus Pedidos</Link>
         </li>
       </ul>
-
-      {/* Hambúrguer para mostrar o menu mobile */}
-      <div className="md:hidden flex justify-end">
-        <button onClick={() => setShowMob(!showMob)} className="mr-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-      </div>
 
       {/* Menu mobile */}
       <div
