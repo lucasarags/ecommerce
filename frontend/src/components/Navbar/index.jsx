@@ -5,7 +5,7 @@ export default function Navbar({ showMob, setShowMob }) {
   return (
     <nav>
       <ul
-        className={`w-screen gap-10 justify-center hidden md:flex py-12 text-base font-semibold text-zinc-50`}
+        className={`w-full gap-10 justify-center hidden md:flex py-6 text-base font-semibold text-zinc-50`}
       >
         <li>
           <Link to="/">Home</Link>
