@@ -56,3 +56,11 @@ Cadastro de uma Venda (/vendas):
 
 obs:
 Em uma solicitação GET, os parâmetros são geralmente passados pela URL, não pelo corpo (body) da requisição. Isso ocorre porque os métodos GET são usados para recuperar dados de um servidor, e os parâmetros geralmente são parte da própria URL, tornando-os visíveis e acessíveis.
+
+obs: preco negativo ta passando , comparar preco com o banco, zero tb
+
+obs: criar o middleware dentro do escopo da rota, e reutilizar em outras rotas seguintes, quando necessário.
+
+obs: ver foma de visualizar /produtos page
+
+obs: barra pesquisar, adicionar dentro da rota, filtro pelo nome, "misa' de camisa ex.

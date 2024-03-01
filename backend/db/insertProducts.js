@@ -47,7 +47,7 @@ const produtos = [
     for (const produto of produtos) {
       const imagePath = path.join("./product_images/", produto.imagem);
 
-      // Convertendo a imagem para base64
+      // (Convertendo a imagem para base64) //Na verdade está somente lendo o arquivo
       const base64Image = fs.readFileSync(imagePath, "base64");
 
       // Inserção na tabela produto

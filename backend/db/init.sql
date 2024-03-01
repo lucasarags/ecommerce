@@ -47,12 +47,12 @@ INSERT INTO categoria (nome) VALUES
 ('Alimentos'),
 ('Livros');
 
--- -- Exemplo de inserção de produtos com categorias
--- INSERT INTO produto (nome, descricao, preco, qtd_estq, categoria_id) VALUES
--- ('Smartphone', 'Um smartphone de última geração', 1500.00, 100, 1),
--- ('Camiseta', 'Camiseta de algodão preta', 25.00, 50, 2),
--- ('Arroz', 'Pacote de arroz integral', 10.00, 200, 3),
--- ('JavaScript: The Good Parts', 'Livro sobre JavaScript', 35.00, 20, 4);
+-- Exemplo de inserção de produtos com categorias
+INSERT INTO produto (nome, descricao, preco, qtd_estq, categoria_id) VALUES
+('Smartphone', 'Um smartphone de última geração', 1500.00, 100, 1),
+('Camiseta', 'Camiseta de algodão preta', 25.00, 50, 2),
+('Arroz', 'Pacote de arroz integral', 10.00, 200, 3),
+('JavaScript: The Good Parts', 'Livro sobre JavaScript', 35.00, 20, 4);
 
 -- -- Inserir dados de produtos
 -- INSERT INTO produto (nome, descricao, preco, qtd_estq, image)
